@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-function InputField({
+const InputField = ({
   id,
   label = " ",
   type = "text",
   className,
   title,
   ...props
-}: any) {
+}: any) => {
   // state
   const [isFocused, setIsFocused] = useState(false);
   const [inputValue, setInputValue] = useState(" ");
@@ -28,7 +28,7 @@ function InputField({
 
   // Render
   return (
-    <div className="relative mb-8">
+    <div className="relative py-8 border-b-4">
       <div className="mb-4">{title}</div>
       <input
         type={type}
@@ -44,9 +44,8 @@ function InputField({
       <label
         onClick={handleOnFocus}
         htmlFor={id}
-        className={`absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform top-14 ${
-          isFocused ? "scale-75 -translate-y-14 " : "scale-100 translate-y-0"
-        }  z-10 origin-[0] left-14`}
+        className={`absolute text-base text-gray-500 dark:text-gray-400 duration-300 transform top-14 ${isFocused ? "scale-75 -translate-y-14 " : "scale-100 translate-y-0"
+          }  z-10 origin-[0] left-14`}
       >
         {label}
       </label>

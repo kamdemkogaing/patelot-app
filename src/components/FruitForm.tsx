@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function FruitForm({ fruits, setFruits }: any) {
+const FruitForm = ({ fruits, setFruits }: any) => {
   // state
   const [nouveauFruit, setNouveauFruit] = useState("");
 
@@ -42,3 +42,9 @@ function FruitForm({ fruits, setFruits }: any) {
 }
 
 export default FruitForm;
+
+// Gestion du formulaire
+//1. création du formulaire
+//2. soumission du formulaire
+//3. collecte des données du formulaire
+
