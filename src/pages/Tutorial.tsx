@@ -3,7 +3,6 @@ import ButtonColor from '../components/ButtonColor';
 import Article from '../components/Article';
 import FruitForm from '../components/FruitForm';
 import InputField from '../components/InputField';
-import Countires from '../components/Countries';
 import Fruit from '../components/Fruit';
 import { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -47,7 +46,6 @@ const Tutorial = () => {
         <ButtonColor couleur />
         <Article id={1} title="Patrick Kamdem" />
         <InputField title="AI Domain Suche" />
-        <Countires />
       </div>
     </div>
   );

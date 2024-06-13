@@ -6,38 +6,33 @@ const Card = ({ index, country, ...rest }) => {
     const [isFLiped, setIsFlipped] = useState(false);
 
     // comportement
-    const flipCardEnter = () => {
-        setIsFlipped(true);
+    const handleClick = () => {
+        setIsFlipped(!isFLiped);
     };
 
-    const flipCardFalse = () => {
-        setIsFlipped(false);
-    };
 
     //Render
     return (
-        <li
+        <div
             key={`country${index}`} {...rest}
-            className="cursor-pointer"
+            className="cursor-pointer flex-grow w-3/12 lg:w-2/12 relative text-left mr-4 lg:pt-12 md:pt-12 pt-4 mb-6"
         >
             <ReactCardFlip flipDirection="vertical" isFlipped={isFLiped}>
                 <div
-                    onMouseEnter={flipCardEnter}
-                    onMouseLeave={flipCardFalse}
+                    onClick={handleClick}
                 >
                     <img
                         src={country.flags.svg}
                         alt={`country:${country.translations.fra.common}`}
                         width={200}
                         height={200}
-                        className="rounded-lg mr-5"
+                        className="rounded-lg"
                     />
                 </div>
 
                 <div
-                    className="p-5 border-4 m-3 flex flex-col"
-                    onMouseEnter={flipCardEnter}
-                    onMouseLeave={flipCardFalse}
+                    className="p-5 border-4 flex flex-col md:w-full lg:w-full bg-white"
+                    onClick={handleClick}
                 >
                     <div>
                         <span className="font-bold">Non du pays:</span> {country.translations.fra.common}
@@ -50,7 +45,7 @@ const Card = ({ index, country, ...rest }) => {
                     </div>
                 </div>
             </ReactCardFlip>
-        </li>
+        </div>
     );
 };
 

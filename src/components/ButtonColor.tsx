@@ -58,6 +58,7 @@ const ButtonColor = ({ couleur }: any) => {
           Changer la couleur
         </button>
         <Button variant="outlined" color="secondary" href="about" size="large" fullWidth={false}>Outlined</Button>
+
         <Button onClick={handleOpen} className="mt-4">Open Child Modal</Button>
         <Modal
           open={open}
@@ -71,6 +72,7 @@ const ButtonColor = ({ couleur }: any) => {
             </p>
           </Box>
         </Modal>
+
       </div>
     </div>
   );
