@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import ImageLogo from '../components/ImageLogo';
 import classNames from 'classnames';
 
 const Home = () => {

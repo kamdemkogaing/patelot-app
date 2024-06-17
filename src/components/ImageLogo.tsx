@@ -22,7 +22,7 @@ const ImageLogo = ({ altName, width, height, ...rest }) => {
 
     // render
     return (
-        <div className={classNames("container mx-auto flex justify-start items-center my-4")}>
+        <div className={classNames('flex justify-start items-center', `${isMobileDevice ? 'w-4/6' : 'w-2/6'}`)}>
             <img src="./img/pk_logo_transparent.png" width={width} height={height} alt={altName} {...rest} />
             <div
                 className={classNames("font-bold")}
@@ -31,7 +31,7 @@ const ImageLogo = ({ altName, width, height, ...rest }) => {
                 }}>
                 Frontend Developer
             </div>
-            <span className={classNames(`${isMobileDevice ? "italic hover:not-italic ml-4" : "ml-4"}`)}>PK</span>
+            <span className={classNames(`${isMobileDevice ? "italic hover:not-italic ml-4" : "ml-4"}`)}></span>
         </div>
     );
 };
