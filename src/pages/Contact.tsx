@@ -1,16 +1,17 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import ImageLogo from '../components/ImageLogo';
+import classNames from 'classnames';
 
 const Contact = () => {
     return (
-        <div className='container mx-auto px-4'>
-            <ImageLogo />
+        <>
             <Navigation />
-            <div className="text-xl my-8">
-                patrick-kamdem@patelot.de
+            <div className={classNames('container mx-auto px-4')}>
+                <div className={classNames("text-xl my-8")}>
+                    patrick-kamdem@patelot.de
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

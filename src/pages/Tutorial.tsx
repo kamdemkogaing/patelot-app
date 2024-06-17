@@ -7,6 +7,7 @@ import Fruit from '../components/Fruit';
 import { useState } from 'react';
 import Navigation from '../components/Navigation';
 import ImageLogo from '../components/ImageLogo';
+import classNames from 'classnames';
 ;
 
 const Tutorial = () => {
@@ -31,12 +32,11 @@ const Tutorial = () => {
 
   return (
     <div>
-      <div className='container mx-auto px-4'>
-        <ImageLogo />
-        <Navigation />
-        <div className="flex flex-col justify-center items-center py-8 border-b-4">
-          <h1 className="mb-4 font-bold text-3xl">Liste des fruits</h1>
-          <ul className="list-decimal">
+      <Navigation />
+      <div className={classNames('container mx-auto px-4')}>
+        <div className={classNames("flex flex-col justify-center items-center py-8 border-b-4")}>
+          <h1 className={classNames("mb-4 font-bold text-3xl")}>Liste des fruits</h1>
+          <ul className={classNames("list-decimal")}>
             {fruits.map((fruit) => (
               <Fruit fruitInfo={fruit} onFruitDelete={handleDelete} key={fruit.id} />
             ))}
@@ -45,6 +45,8 @@ const Tutorial = () => {
         </div>
         <ButtonColor couleur />
         <Article id={1} title="Patrick Kamdem" />
+        <Article id={2} title="Luca Kamdem" />
+        <Article id={3} title="Elyas Kamdem" />
         <InputField title="AI Domain Suche" />
       </div>
     </div>

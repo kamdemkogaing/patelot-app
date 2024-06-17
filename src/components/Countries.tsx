@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import Navigation from "./Navigation";
-import ImageLogo from "./ImageLogo";
 import Card from "./Card";
 import Button from '@material-ui/core/Button'
-import { useFetcher } from "react-router-dom";
+import classNames from "classnames";
 
 const Countires = () => {
     // state
@@ -35,10 +34,10 @@ const Countires = () => {
 
     // render
     return (
-        <div className="container mx-auto px-4">
-            <div>
-                <ImageLogo />
-                <Navigation />
+
+        <>
+            <Navigation />
+            <div className={classNames("container mx-auto px-4")}>
                 <div className="my-8 p-4 lg:h-12 bg-green-200 lg:flex lg:justify-between lg:items-center lg:rounded-full">
                     <input
                         type="range"
@@ -93,7 +92,7 @@ const Countires = () => {
                         .map((country, index) => <Card key={`country-${index}`} country={country} index={index} />)}
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
