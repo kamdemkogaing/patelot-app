@@ -51,6 +51,50 @@ const Navigation = () => {
                     width={35}
                     height={35}
                 />
+                <ul className={classNames('flex flex-wrap justify-end w-4/6')}>
+                    <NavLink to="/" className={({ isActive }) =>
+                        isActive ? "active inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500" : "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                    }>
+                        <li className='me-2'>accueil</li>
+                    </NavLink>
+                    <NavLink to="/about" className={({ isActive }) =>
+                        isActive ? "active inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500" : "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                    }>
+                        <li className='me-2'>á propos</li>
+                    </NavLink>
+                    <NavLink
+                        to="/contact"
+                        className={({ isActive }) =>
+                            isActive ? "active inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500" : "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                        }
+                    >
+                        Contact
+                    </NavLink>
+                    <NavLink
+                        to="/tutorial"
+                        className={({ isActive }) =>
+                            isActive ? "active inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500" : "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                        }
+                    >
+                        Tutorial
+                    </NavLink>
+                    <NavLink
+                        to="/country"
+                        className={({ isActive }) =>
+                            isActive ? "active inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500" : "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                        }
+                    >
+                        Countries
+                    </NavLink>
+                </ul >
+            </div>
+
+            {/* <div className={classNames("flex flex-wrap container mx-auto p-5")}>
+                <ImageLogo
+                    altName="patelot.de logo"
+                    width={35}
+                    height={35}
+                />
                 <ul className={classNames('flex flex-wrap justify-end', `${isMobileDevice ? 'hidden w-4/6' : 'w-4/6'}`)}>
                     <NavLink to="/" className={({ isActive }) =>
                         isActive ? "active inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg dark:text-blue-500 dark:border-blue-500" : "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
@@ -103,7 +147,7 @@ const Navigation = () => {
                         />
                     </span>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

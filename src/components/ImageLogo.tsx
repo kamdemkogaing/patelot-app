@@ -22,7 +22,7 @@ const ImageLogo = ({ altName, width, height, ...rest }) => {
 
     // render
     return (
-        <div className={classNames('flex justify-start items-center', `${isMobileDevice ? 'w-4/6' : 'w-2/6'}`)}>
+        <div className={classNames('flex justify-start items-center w-2/6')}>
             <img src="./img/pk_logo_transparent.png" width={width} height={height} alt={altName} {...rest} />
             <div
                 className={classNames("font-bold")}
