@@ -1,4 +1,3 @@
-
 const Fruit = ({ fruitInfo, onFruitDelete }: any) => {
   // state
 
@@ -17,7 +16,7 @@ const Fruit = ({ fruitInfo, onFruitDelete }: any) => {
         </button>
       </li>
     </div>
-  )
-}
+  );
+};
 
-export default Fruit
+export default Fruit;

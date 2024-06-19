@@ -6,12 +6,10 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Tutorial from "./pages/Tutorial";
-import Countires from "./components/Countries";
-
+import Countires from "./components/country/Countries";
 
 const App = () => {
   // state
-
 
   // comportements
 
