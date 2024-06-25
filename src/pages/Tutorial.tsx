@@ -1,12 +1,12 @@
-import ButtonColor from "../components/button/ButtonColor";
+import classNames from "classnames";
+import { useState } from "react";
 import Article from "../components/article/Article";
+import { ButtonView } from "../components/button/Button";
+import ButtonColor from "../components/button/ButtonColor";
+import Fruit from "../components/form/Fruit";
 import FruitForm from "../components/form/FruitForm";
 import InputField from "../components/form/InputField";
-import Fruit from "../components/form/Fruit";
-import { useState } from "react";
 import Navigation from "../components/nav/Navigation";
-import classNames from "classnames";
-import { ButtonView } from "../components/button/Button";
 
 const Tutorial = () => {
   // state
@@ -27,22 +27,6 @@ const Tutorial = () => {
     //3. modifier le state avec son setter
     setFruits(fruitsCopyUpdated);
   };
-
-  const creatPairs = <S, T>(v1: S, v2: T): [S, T] => {
-    return [v1, v2];
-  };
-
-  type Wrapped<T, S, I, Q> = { value?: T; email?: S; sexe: I; adresse?: Q };
-
-  const wrappedValue: Wrapped<number, string, string, string[]> = {
-    value: 10,
-    email: "patrick-kamdem@patelot.de",
-    sexe: "masculin",
-    adresse: ["Esperantostrasse", "14A", "77704"],
-  };
-
-  console.log(creatPairs<string, number>("hello", 42));
-  console.log("wrappedValue", wrappedValue);
 
   return (
     <div>

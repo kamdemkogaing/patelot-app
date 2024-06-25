@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import Navigation from "../nav/Navigation";
-import Card from "../card/Card";
 import Button from "@material-ui/core/Button";
 import classNames from "classnames";
+import { useEffect, useState } from "react";
+import Card from "../card/Card";
+import Navigation from "../nav/Navigation";
 
 const Countires = () => {
   // state
@@ -97,23 +97,3 @@ const Countires = () => {
 };
 
 export default Countires;
-
-/* const joke = {
-    setup: 'Why did the chicken cross the road?',
-    punchline: 'To get to the other side!'
-};
-
-const options = {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'X-RapidAPI-Key': 'your-api-key',
-        'X-RapidAPI-Host': 'jokes-by-api-ninjas.p.rapidapi.com',
-    },
-    body: JSON.stringify(joke)
-};
-
-fetch('https://jokes-by-api-ninjas.p.rapidapi.com/v1/jokes', options)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error)); */

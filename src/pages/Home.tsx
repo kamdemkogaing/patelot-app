@@ -1,6 +1,5 @@
-import React from "react";
-import Navigation from "../components/nav/Navigation";
 import classNames from "classnames";
+import Navigation from "../components/nav/Navigation";
 
 const Home = () => {
   return (

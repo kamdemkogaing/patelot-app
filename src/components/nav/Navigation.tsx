@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import { useEffect, useState } from "react";
+import HamburgerMenu from "react-hamburger-menu";
 import { NavLink } from "react-router-dom";
 import ImageLogo from "../form/ImageLogo";
-import HamburgerMenu from "react-hamburger-menu";
 
 const Navigation = () => {
   // state
@@ -190,28 +190,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
-// Scroll Event
-/* const nav = document.querySelector("nav");
-
-window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-  
-  if (window.scrollY > 120) {
-    nav.style.top = 0;
-  } else {
-    nav.style.top = "-145px"
-  }
-}); */
-
-/* {classNames(
-    'bg-slate-200 flex flex-wrap -mb-px',
-    {
-        'tw-grid-cols-2': scrolled
-    },
-)} */
-
-/* className={classNames('bg-slate-200 flex flex-wrap -mb-px', {
-    'text-white dark': colorScheme === 'dark',
-    'text-[#001B41]': colorScheme === 'bright',
-})} */
