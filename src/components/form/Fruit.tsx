@@ -1,4 +1,4 @@
-const Fruit = ({ fruitInfo, onFruitDelete }: any) => {
+const Fruit = ({ fruitInfo, onFruitDelete }) => {
   // state
 
   // comportements
