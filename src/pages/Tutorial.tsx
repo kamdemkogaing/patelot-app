@@ -17,7 +17,7 @@ const Tutorial = () => {
   ]);
 
   // comportements
-  const handleDelete = (id: any) => {
+  const handleDelete = (id) => {
     //1. copie du state
     const fruitsCopy = [...fruits];
 
@@ -55,7 +55,7 @@ const Tutorial = () => {
         <Article id={1} title="Patrick Kamdem" />
         <Article id={2} title="Luca Kamdem" />
         <Article id={3} title="Elyas Kamdem" />
-        <InputField title="AI Domain Suche" />
+        <InputField title="AI Domain Suche" id={1} className="patelot-app" />
         <ButtonView />
       </div>
     </div>

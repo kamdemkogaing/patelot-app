@@ -7,7 +7,7 @@ const InputField = ({
   className,
   title,
   ...props
-}: any) => {
+}) => {
   // state
   const [isFocused, setIsFocused] = useState(false);
   const [inputValue, setInputValue] = useState(" ");
@@ -21,7 +21,7 @@ const InputField = ({
     setIsFocused(false);
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (e) => {
     setInputValue(e.target.value);
     setIsFocused(e.target.value !== "");
   };
