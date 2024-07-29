@@ -1,24 +1,25 @@
 import { useState } from "react";
 
-const FruitForm = ({ fruits, setFruits }: any) => {
+const FruitForm = ({ fruits, setFruits }) => {
   // state
   const [nouveauFruit, setNouveauFruit] = useState("");
 
   // comportement
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     //1. copie du state
     const fruitsCopy = [...fruits];
 
-    //2. manipuler le state
+    //2. manipuler sur la copie du state
     fruitsCopy.push({ id: new Date().getTime(), nom: nouveauFruit });
 
     //3. modifier le state avec le setter
     setFruits(fruitsCopy);
+    setNouveauFruit(" ");
   };
 
-  const handleChange = (event: any) => {
+  const handleChange = (event) => {
     setNouveauFruit(event.target.value);
   };
 
@@ -39,7 +40,7 @@ const FruitForm = ({ fruits, setFruits }: any) => {
       </form>
     </>
   );
-}
+};
 
 export default FruitForm;
 
@@ -47,4 +48,3 @@ export default FruitForm;
 //1. création du formulaire
 //2. soumission du formulaire
 //3. collecte des données du formulaire
-
