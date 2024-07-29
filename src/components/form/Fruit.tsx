@@ -1,9 +1,9 @@
-const Fruit = ({ fruitInfo, onFruitDelete }: any) => {
+const Fruit = ({ fruitInfo, onFruitDelete }) => {
   // state
 
   // comportements
 
-  // affichage
+  // render
   return (
     <div>
       <li>
